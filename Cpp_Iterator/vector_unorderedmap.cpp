@@ -66,7 +66,16 @@ int main()
             std::cout << key << " - " << val << std::endl;
     }
 
+    // other ways
+    for (auto& kv : map) {
+        auto& key = kv.first;  // Access key directly
+        auto& val = kv.second; // Access value directly
+        std::cout << key << " - " << val << std::endl;
+    }
 
+    for(auto [k,v] : map) {
+         std::cout << k << " - " << v << std::endl;
+    }
 
     return 0;
 }
